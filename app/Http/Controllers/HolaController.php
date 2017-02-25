@@ -9,11 +9,13 @@ class HolaController extends Controller
     //
     public function index()
     {
-     echo "Hola Mundo";
+     return view ("hola/index");
+        //echo "index";
     }
     public function saludar(Request $request, $nombre)
     {
-     echo "Hello " . $nombre;
+     return view ('hola/saludar', ['elnombre' => $nombre]);
+        //echo "saludo";
     }
 
     
